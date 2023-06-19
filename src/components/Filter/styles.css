@@ -1,0 +1,84 @@
+.filter-div {
+  border-top: 1px solid var(--grey);
+  /* Borde superior de 1 píxel sólido de color gris */
+  padding: 1rem 3rem;
+  /* Relleno de 1 rem en la parte superior e inferior, 3 rem en los lados */
+  display: flex;
+  /* Elemento de tipo flex */
+  justify-content: flex-start;
+  /* Justificación del contenido al inicio */
+  align-items: center;
+  /* Alineación vertical del contenido al centro */
+  overflow-x: auto;
+  /* Desplazamiento horizontal si el contenido excede el ancho del contenedor */
+}
+
+.links-box {
+  display: flex;
+  /* Elemento de tipo flex */
+  flex-direction: column;
+  /* Orientación del contenido en columna */
+  justify-content: center;
+  /* Justificación del contenido al centro */
+  align-items: center;
+  /* Alineación vertical del contenido al centro */
+  margin-right: 2rem;
+  /* Margen derecho de 2 rem */
+  opacity: 0.5;
+  /* Opacidad de 0.5 */
+  border-bottom: 1px solid var(--white);
+  /* Borde inferior de 1 píxel sólido de color blanco */
+  min-width: 85px;
+  /* Ancho mínimo de 85 px */
+}
+
+.links-box:hover,
+/* Estilos al pasar el cursor sobre .links-box */
+.selected-box {
+  /* Estilos cuando .selected-box está presente */
+  opacity: 1;
+  /* Opacidad de 1 */
+  border-bottom: 1px solid var(--black);
+  /* Borde inferior de 1 píxel sólido de color negro */
+  transition: all 0.3s;
+  /* Transición de 0.3 segundos para suavizar cambios */
+  cursor: pointer;
+  /* Cambiar el cursor a un puntero */
+}
+
+.links-img {
+  width: 1.5rem;
+  /* Ancho de 1.5 rem */
+  height: 1.5rem;
+  /* Alto de 1.5 rem */
+  object-fit: contain;
+  /* Ajuste del objeto a "contain" */
+}
+
+.links-label {
+  font-size: 0.7rem;
+  /* Tamaño de fuente de 0.7 rem */
+  font-weight: 600;
+  /* Peso de fuente de 600 */
+  color: var(--font-grey);
+  /* Color de texto definido por una variable */
+}
+
+.selected-label {
+  color: var(--black);
+  /* Color de texto definido por una variable */
+}
+
+@media only screen and (max-width: 800px) {
+  .filter-div {
+    /* @media es una regla de CSS que se utiliza para aplicar estilos específicos según las características del dispositivo o la ventana del navegador en la que se visualiza el contenido. En este caso, @media only screen indica que los estilos dentro de esta regla se aplicarán únicamente cuando se visualice en dispositivos de tipo pantalla, como computadoras, tabletas o teléfonos inteligentes.
+
+La declaración "and (max-width: 800px)" establece una condición adicional, indicando que los estilos dentro de la regla @media solo se aplicarán si el ancho máximo de la pantalla es de 800 píxeles o menos. Esto permite ajustar el diseño y la apariencia del contenido en pantallas más pequeñas, como dispositivos móviles, para proporcionar una experiencia de usuario óptima.
+
+En resumen, la regla @media only screen and (max-width: 800px) se utiliza para aplicar estilos específicos cuando se visualiza el contenido en pantallas de 800 píxeles de ancho o menos. */
+    padding: 0.5rem;
+    /* Relleno de 0.5 rem */
+    padding-top: 1.5rem;
+    /* Relleno superior de 1.5 rem */
+  }
+}
